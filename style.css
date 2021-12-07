@@ -1,10 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Chakra+Petch:wght@300&family=Genos:wght@200&family=Indie+Flower&family=Permanent+Marker&family=Press+Start+2P&family=Shadows+Into+Light&family=Ubuntu+Mono:wght@700&display=swap");
+
 body {
   background-color: #a40606;
   background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+}
+.status {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url("img/ajax-loader.gif");
+  z-index: 9999;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: -50px 0 0 -50px;
 }
 html {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -21,19 +46,13 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
-/* #home {
-  margin-bottom: 15%;
-} */
 
 #home h1 {
   color: black;
 }
-/* #home {
-   background-color: #a40606;
-  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%); 
-}*/
+
 #about {
   /* background-color: aquamarine; */
   height: 100vh;
@@ -55,41 +74,39 @@ section {
 
 .candlebox {
   position: relative;
-  height: 400px;
-  width: 300px;
-  z-index: -1;
-  background-color: black;
+  margin-left: 2%;
+  height: 380px;
+  width: 400px;
+  /* z-index: -1; */
+  /* background-color: black; */
 }
-/* .candlex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+
 .contentx {
-  background: rgba(226, 218, 218, 0.1);
+  /* background: rgba(226, 218, 218, 0.1); */
   width: 60%;
   float: right;
   /* padding: 20px; */
   margin-left: 5%;
-  /* box-shadow: 0 0 16px 0 rgba(245, 241, 241, 0.5); */
 }
-/* #contentx {
-  display: flex;
-  width: 50%;
-  float: right;
-  padding: 3%;
-} */
+.textx {
+  color: white;
+  font-size: 1.5em;
+  font-family: "Chakra Petch", sans-serif;
+}
 
-.contentLines {
-  width: 80%;
-  margin-left: 15%;
-  margin-right: 15%;
-  font-family: "Caveat", cursive;
-  font-weight: 600;
-  text-transform: lowercase;
-  /* text-align: justify; */
-  font-size: 30px;
-  letter-spacing: 0.1em;
+@media screen and (max-width: 600px) {
+  .candlebox {
+    height: 300px;
+    width: 300px;
+  }
+  .contentx {
+    width: 60%;
+    float: right;
+    margin-left: 5%;
+  }
+  .textx {
+    font-size: 17px;
+  }
 }
 
 .navbar {
@@ -182,6 +199,5 @@ section {
   }
   .contentx {
     background: none;
-    margin
   }
 }
